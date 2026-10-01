@@ -1,0 +1,194 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #8e0000;
+  color: white;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 8px 0 16px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background-color: white;
+  color: #8e0000;
+}
+
+main {
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+#note-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#note-form label {
+  width: 100%;
+  font-weight: bold;
+}
+
+#note-input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #0ba184;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover,
+button:focus-visible {
+  background-color: #088a70;
+  transform: translateY(-1px);
+}
+
+#notes-list {
+  list-style: none;
+  padding: 0;
+}
+
+#notes-list li {
+  background-color: #fffbe6;
+  border-left: 4px solid #0ba184;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  background-color: #f4f6f8;
+  border-left: 4px solid #0ba184;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f6f8;
+}
+
+form:not(#note-form) p {
+  margin: 0 0 16px;
+}
+
+form:not(#note-form) label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+form:not(#note-form) input,
+form:not(#note-form) textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+form:not(#note-form) textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+footer {
+  text-align: center;
+  color: #777;
+  padding: 16px;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 18px 12px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  main {
+    margin: 16px auto;
+    padding: 0 12px;
+  }
+
+  #note-form {
+    flex-direction: column;
+  }
+}
